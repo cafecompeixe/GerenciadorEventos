@@ -30,3 +30,7 @@ class EventoViewSet(ModelViewSet):
         eventos = self.get_eventos(data_ini, data_fim)
         serializer = EventoSerializer(eventos, many=True)
         return Response(serializer.data)
+    
+class SobreViewSet(ModelViewSet):
+    queryset = Sobre.objects.all()
+    serializer_class = SobreSerializer
