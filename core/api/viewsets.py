@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
-from core.api.serializers import EventoSerializer
+from core.api.serializers import EventoSerializer, SobreSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from core.models import Evento
+from core.models import Evento, Sobre
 from datetime import datetime  
 from django.db.models import Q
 
