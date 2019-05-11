@@ -16,13 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
-from core.api.viewsets import EventoViewSet
+from core.api.viewsets import EventoViewSet, SobreViewSet
 from atividade.api.viewsets import AtividadeViewSet
 from endereco.api.viewsets import EnderecoViewSet
 from presenca.api.viewsets import PresencaViewSet
 
 
 router = routers.DefaultRouter()
+router.register(r'sobre', SobreViewSet)
 router.register(r"eventos",EventoViewSet)
 router.register(r"atividades",AtividadeViewSet)
 router.register(r"endereco",EnderecoViewSet)
