@@ -17,3 +17,14 @@ class Evento(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Sobre(models.Model):
+    programadores = models.CharField(max_length=250)
+    gitHub = models.CharField(max_length=200)
+    desricao = models.CharField(max_length=200)
+    versaoDaAPI = models.CharField(max_length=20)
+    versaoDoApp = models.CharField(max_length=20)
+    dataDeCriacao = models.DateField()
+
+    def __str__(self):
+        return 'Sobre'
