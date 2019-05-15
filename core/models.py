@@ -8,7 +8,7 @@ from presenca.models import Presenca
 class Evento(models.Model):
     nome = models.CharField(max_length=150)
     descricao = models.CharField(max_length=150)
-    data_evento = models.DateField()
+    data = models.DateField()
     hora_evento = models.TimeField()
     atividade = models.ManyToManyField(Atividade)
     presenca = models.ManyToManyField(Presenca)

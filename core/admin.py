@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import Evento
+from core.models import Evento, Sobre
 
 
 admin.site.register(Evento)
