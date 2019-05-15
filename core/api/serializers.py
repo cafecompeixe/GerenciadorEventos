@@ -4,7 +4,7 @@ from core.models import Evento, Sobre
 class EventoSerializer(ModelSerializer):
     class Meta:
         model = Evento
-        fields = ('id', 'nome', 'descricao', 'data', 'atividade', 'endereco')
+        fields = ('id', 'nome', 'descricao', 'data', 'hora_evento', 'atividade', 'endereco')
 
 class SobreSerializer(ModelSerializer):
     class Meta:
