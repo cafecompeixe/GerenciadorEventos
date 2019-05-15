@@ -24,7 +24,7 @@ SECRET_KEY = '1^zl%=^i*5p&^f#ti&l2g$7q_n9lex%epb2ka6qwhbhi#xe5kr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'atividade',
     'endereco',
     'presenca',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ORIGIN_WHITELIST = [
+    "https://*",
+    "http://*",
 ]
 
 ROOT_URLCONF = 'gerenciadoreventos.urls'
